@@ -23,7 +23,16 @@ Assignment 4: Mozilla's firebug/ Chrome Dev Tools/ Eclipse shortcuts and debug t
 	The answers have been written as a plain text file using python-markdown and then converted to html.
 	All the three files for this assignment are available in the "assignment 4" folder.
 
+Order of storing files:
+
+	Assignments directory contains all the classes and libraries related to assignments 1-3:
+	* package assignment.expression - contains all the java files related to assignment 1.
+	* package assignment.jdbcExample - contains all the java files related to assignment 2.
+	* file "json files" - contains all json object for defined expressions.
+	* text file "expressionList" - contains the list of defined expressions.
+	
 Status:
+
 	Assignment 1 - completed
 	Assignment 2 - Partly done
 	Assignment 3 - TODO

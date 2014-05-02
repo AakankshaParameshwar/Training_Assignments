@@ -1,0 +1,37 @@
+<h1>Assignment 4 Answers</h1>
+<ol>
+<li>
+<p><strong>What are Frames in Chrome Developer tool (under timeline)?</strong>
+        Frames show the amount of time spent by the browser to load the html, display content, render it and update the DOM via handlers,js events etc.
+        This information is very helpful in determining how fast your frames are fetched, which in turn determine the efficiency and time complexity of the your code.</p>
+</li>
+<li>
+<p><strong>what is live edit in chrome devloper tools?</strong>
+        Live edit is a feature in chrome developer tools and firebug that help you to dynamically change your html,javascript and css code (i.e. delete a block of html code, change css styles or change scripts) 
+        and view the changes directly on the page.
+        The advantage of live editing is that the orginal code is left untounched (stored on server side). So the user can modify blocks of html, js in his program and see how it affects the code.</p>
+</li>
+<li>
+<p><strong>under what senarios chrome will allow to do live edit and under which senario it will not.</strong>
+        live edit in chrome is available for html, javascript and css only. Hence live edit cannot be used to change cookies  or modify seesion id etc as that would lead to session fixation attack.
+        In the above scenarios chrome does not allow live edit.</p>
+</li>
+<li>
+<p><strong>what is eclipse vertical edit?</strong>
+        I really din't know about this, but now that I do, I think its a really cool feature.
+        Many editors provide option of horizontally selecting your code to change it, but what if you wanted to select a column of data and modify it without affecting the whole row? In a horizontal edit this is a tedious process.
+        This is where eclipse's vertical edit/ block selection mode comes handy. This mode can be enabled by using Shift=Alt+A.</p>
+</li>
+<li>
+<p><strong>write a function in js which when run from console will print fibonaci series after a interval of 2 sec.</strong>
+        <code>javascript
+        var a=0;
+        var b=1;
+        setInterval(function(){
+        console.log(a);
+        c=a+b;
+        a=b;
+        b=c;
+        },2000);</code></p>
+</li>
+</ol>
