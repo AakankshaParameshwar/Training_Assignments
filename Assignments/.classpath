@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/gson_lib"/>
+	<classpathentry kind="lib" path="C:/Users/Abyeti Technologies/Downloads/jdbc-driver/mysql-connector-java-5.1.18-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Abyeti Technologies/Downloads/hibernate-search-4.5.1.Final-dist/hibernate-search-4.5.1.Final/dist/lib/provided/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

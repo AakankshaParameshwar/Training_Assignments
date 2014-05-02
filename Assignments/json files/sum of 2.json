@@ -1,0 +1,1 @@
+{"name":"sum of 2","expression":"a+b","variables":["a","b"],"expressionTree":{"left":{"data":"a"},"right":{"data":"b"},"data":"+"}}

@@ -1,0 +1,1 @@
+{"name":"floating","expression":"a+b-20.5","variables":["a","b","20.5"],"expressionTree":{"left":{"data":"a"},"right":{"left":{"data":"b"},"right":{"data":"20.5"},"data":"-"},"data":"+"}}

@@ -1,0 +1,1 @@
+{"name":"average","expression":"(a+b)/2","variables":["a","b","2"],"expressionTree":{"left":{"left":{"data":"a"},"right":{"data":"b"},"data":"+"},"right":{"data":"2"},"data":"/"}}

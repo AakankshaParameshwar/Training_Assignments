@@ -1,0 +1,30 @@
+
+Assignment 1: Java Basic
+
+    1. WAP in java to accept an expression syntax, convert it into an Expression Tree and store it either in a XML or JSON format.
+    2. The user can choose from the list of available expressions, enter the values and get the result. Along with the result the Expression Tree must be displayed.
+
+
+Assignment 2: Java Advanced( Threads/ JDBC/ Annotations/ Reflection/ Generics)
+
+    1. WAP in java to implement a simple JDBC code to connect to a database and execute statements. Play around with concepts.
+    2. WAP in java to implement a code that manipulates the databases in a generic way (based on the object passed to it) by using Reflection(Abstract class) or Annotations.
+    3. Prepare test cases to create 1000 records in a database and calculate the time taken for it. Use Threads for this.
+	
+Assignment 3: Java Advanced( Servelets/ JSPs/ EJBs)
+
+    Create a simple student application( either using Servlets/ EJBs)  that has the following features:
+    1. Shows the list of existing students.
+    2. Provides option to add a new Student record to database.
+    3. Provides options such as edit and delete for each student record to manipulate the database.
+
+Assignment 4: Mozilla's firebug/ Chrome Dev Tools/ Eclipse shortcuts and debug tools/ Java stacktrace
+
+	The answers have been written as a plain text file using python-markdown and then converted to html.
+	All the three files for this assignment are available in the "assignment 4" folder.
+
+Status:
+	Assignment 1 - completed
+	Assignment 2 - Partly done
+	Assignment 3 - TODO
+	Assignment 4 - completed

@@ -1,0 +1,1 @@
+{"name":"test","expression":"(a+b)/(a-b+ab)","variables":["a","b","ab"],"expressionTree":{"left":{"left":{"data":"a"},"right":{"data":"b"},"data":"+"},"right":{"left":{"data":"a"},"right":{"left":{"data":"b"},"right":{"data":"ab"},"data":"+"},"data":"-"},"data":"/"}}

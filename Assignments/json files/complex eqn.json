@@ -1,0 +1,1 @@
+{"name":"complex eqn","expression":"(xx+yy*2)/10","variables":["xx","yy","2","10"],"expressionTree":{"left":{"left":{"data":"xx"},"right":{"left":{"data":"yy"},"right":{"data":"2"},"data":"*"},"data":"+"},"right":{"data":"10"},"data":"/"}}

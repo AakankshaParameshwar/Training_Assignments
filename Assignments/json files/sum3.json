@@ -1,0 +1,1 @@
+{"name":"sum3","expression":"a+b+10","variables":["a","b","10"],"expressionTree":{"left":{"data":"a"},"right":{"left":{"data":"b"},"right":{"data":"10"},"data":"+"},"data":"+"}}
