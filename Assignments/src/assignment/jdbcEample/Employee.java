@@ -55,9 +55,10 @@ public class Employee extends DBPersister {
 		super.delete();
 	}
 	@Override
-	public void displayAllData(){
+	public String[][] displayAllData(){
 		
-		super.displayAllData();
+	String[][] data=super.displayAllData();
+	return data;
 	}
 	@Override
 	public String toString() {

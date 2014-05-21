@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.math.*;
@@ -56,9 +57,15 @@ public class DBPersister {
 	 */
 	public void closeConnection(){
 		try{
-		resultSet.close();
-		preparedStatement.close();
-		statement.close();
+			if(resultSet!=null){
+				resultSet.close();
+		}
+			if(preparedStatement!=null){
+				preparedStatement.close();
+		}	
+			if(statement!=null){
+				statement.close();
+		}		
 		connectionObj.close();
 		System.out.println("---> Closed the connection");
 		}catch (SQLException e) {
@@ -255,33 +262,51 @@ public class DBPersister {
 	 
 	 /**
 	  * This method is used to display all the records stored in a table specific to a class.
+	 * @return TODO
 	  */
-	public void displayAllData() {
+	public String[][] displayAllData() {
 		String tableName = this.getClass().getSimpleName();
 		String query;
+		
+		
+		//StringBuffer buf=new StringBuffer();
 		try {
+			int j=0;
 			statement = connectionObj.createStatement();
 			query = "select * from " + tableName;
 			System.out.println(query);
 			resultSet = statement.executeQuery(query);
-
+			ResultSetMetaData meta = resultSet.getMetaData();
+			int cols=meta.getColumnCount();
+			resultSet.last();
+			int rows=resultSet.getRow();
+			String[][] str=new String[rows][cols];
 			Field[] fields = this.getClass().getDeclaredFields();
 			System.out.println(fields.length);
 			for (int i = 0; i < fields.length; i++) {
-				System.out.print(fields[i].getName() + "\t");
+				//System.out.print(fields[i].getName() + "\t" +j);
+				str[j][i]=fields[i].getName();
 			}
-			System.out.println();
+			//System.out.println();
+			j++;
+			resultSet.first();
 			while (resultSet.next()) {
 				for (int i = 0; i < fields.length; i++) {
-					System.out.print(resultSet.getString(fields[i].getName())
-							+ "\t");
+					//System.out.print(resultSet.getString(fields[i].getName())+ "\t");
+					//buf.append(resultSet.getString(fields[i].getName())+"\t");
+					str[j][i]=resultSet.getString(fields[i].getName());
 				}
-				System.out.println();
+				//System.out.println();
+				j++;
 			}
+			//return buf.toString();
+			return str;
 		} catch (SQLException e) {
 			System.out.println("Unable to select data from db");
 			e.printStackTrace();
-			System.exit(1);
+			//return buf.toString();
+			return null;
+			
 		}
 	}
 	

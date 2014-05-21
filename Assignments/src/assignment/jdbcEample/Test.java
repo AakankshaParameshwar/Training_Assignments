@@ -14,7 +14,7 @@ public class Test {
 	}
 	public static void main(String[] args)throws IOException{
 		
-		//Student s= new Student();
+		Student s= new Student();
 		//Random rand=new Random();
 		/*s.setId(789);
 		s.setName("anu");
@@ -34,8 +34,17 @@ public class Test {
 		long id=789;
 		//Class classObj=s.getClass();
 		Employee obj=new Employee();
-		obj=DBPersister.loadById(Employee.class, id);
-		System.out.println(obj.getName());
+		s.connectToDB("assignment2", "root", "aakanksha");
+		String[][] data=s.displayAllData();
+		for(int i=0;i<data.length;i++){
+			for(int j=0; j<data[0].length;j++){
+			System.out.print(data[i][j]+"\t");
+			}
+			System.out.println();
+		}
+		s.closeConnection();
+		/*obj=DBPersister.loadById(Employee.class, id);
+		System.out.println(obj.getName());*/
 	}
 
 }

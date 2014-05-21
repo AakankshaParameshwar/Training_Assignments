@@ -64,8 +64,9 @@ public class Student extends DBPersister {
 		super.delete();
 	}
 	@Override
-	public void displayAllData(){
-		super.displayAllData();
+	public String[][] displayAllData(){
+		String[][] data=super.displayAllData();
+		return data;
 	}
 	
 	@Override
