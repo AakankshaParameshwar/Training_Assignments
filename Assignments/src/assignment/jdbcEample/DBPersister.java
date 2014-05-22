@@ -66,7 +66,9 @@ public class DBPersister {
 			if(statement!=null){
 				statement.close();
 		}		
-		connectionObj.close();
+			if(connectionObj!=null){
+				connectionObj.close();
+		}
 		System.out.println("---> Closed the connection");
 		}catch (SQLException e) {
 			System.out.println("Failed to close Connection");

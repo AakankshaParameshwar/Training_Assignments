@@ -12,9 +12,18 @@ public class Test {
 		   } while (bits-val+(n-1) < 0L);
 		   return val;
 	}
-	public static void main(String[] args)throws IOException{
+	
+	public static String main(String[] args)throws IOException{
+		
 		
 		Student s= new Student();
+		long id=789;
+		//Class classObj=s.getClass();
+		
+		s.connectToDB("assignment2", "root", "aakanksha");
+		s=DBPersister.loadById(Student.class, id);
+		s.closeConnection();
+		return s.getName();
 		//Random rand=new Random();
 		/*s.setId(789);
 		s.setName("anu");
@@ -31,20 +40,7 @@ public class Test {
 		e.save();
 		DBPersister.closeConnection();*/
 		
-		long id=789;
-		//Class classObj=s.getClass();
-		Employee obj=new Employee();
-		s.connectToDB("assignment2", "root", "aakanksha");
-		String[][] data=s.displayAllData();
-		for(int i=0;i<data.length;i++){
-			for(int j=0; j<data[0].length;j++){
-			System.out.print(data[i][j]+"\t");
-			}
-			System.out.println();
-		}
-		s.closeConnection();
-		/*obj=DBPersister.loadById(Employee.class, id);
-		System.out.println(obj.getName());*/
+		
 	}
 
 }
